@@ -88,7 +88,7 @@ The output of the above barChart function generates a simple chart with a bar fo
 ![Example Random Forest vs. K-Nearest Neighbor R-squared](https://github.com/brmagnuson/MachineLearningUtilities/blob/master/demo/rSquared.png "Random Forest vs. K-Nearest Neighbor R-squared") 
 
 
-Mlutilities also allows for DataSets to be scaled from 0 to 1 before any models are used, as some machine learning algorithms perform better with numbers reduced to this range, and for other DataSets to be scaled using the same scaling process. The scaleDataSet and scaleDataSetByScaler functions are demonstrated below.
+mlutilities also allows for DataSets to be scaled from 0 to 1 before any models are used, as some machine learning algorithms perform better with numbers reduced to this range, and for other DataSets to be scaled using the same scaling process. The scaleDataSet and scaleDataSetByScaler functions are demonstrated below.
 
 ```python
 # Scale data
@@ -111,7 +111,7 @@ pcaTestingData = mlutilities.dataTransformation.engineerFeaturesByTransformer(
                                                          testingData, transformer)
 ```
 
-Mlutilities also provides a way to average or stack models to test improvement due to model aggregation. An example of building a StackingEnsemble is shown below. The tunedModelResults for the random forest and k-nearest neighbors models are processed to extract the tuned model configurations. These are then used as the base predictors for the stacking ApplyModelConfiguration, with the random forest model arbitrarily chosen (by specifying predictorConfigs[0]) as the second-level model that predicts based on the base predictors’ results. (An AveragingEnsemble can also be created in a similar way. For that approach, rather than using a second-level model, the base predictors’ results are all averaged together for a final prediction. By default, a regular arithmetic mean is calculated, but if desired, the user can specify weights for each base predictor, which results in a weighted average instead.)
+mlutilities provides a way to average or stack models to test improvement due to model aggregation. An example of building a StackingEnsemble is shown below. The tunedModelResults for the random forest and k-nearest neighbors models are processed to extract the tuned model configurations. These are then used as the base predictors for the stacking ApplyModelConfiguration, with the random forest model arbitrarily chosen (by specifying predictorConfigs[0]) as the second-level model that predicts based on the base predictors’ results. (An AveragingEnsemble can also be created in a similar way. For that approach, rather than using a second-level model, the base predictors’ results are all averaged together for a final prediction. By default, a regular arithmetic mean is calculated, but if desired, the user can specify weights for each base predictor, which results in a weighted average instead.)
 
 ```python
 # Create stacking ensemble
