@@ -3,7 +3,7 @@ mlutilities is a Python 3.4 package that helps you explore and evaluate combinat
 
 ## Dependencies
 
-sklearn, matplotlib, pandas, numpy, and some base Python packages.
+sklearn 0.16.1, matplotlib 0.17.0, pandas, numpy, and some base Python packages.
 
 ## Using mlutilities to experiment with machine learning approaches
 
